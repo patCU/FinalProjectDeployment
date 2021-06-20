@@ -1,0 +1,7 @@
+Male:
+-Traditional:
+-Science Fiction:
+-Superheroes:
+-Fantasy:
+-
+Female:
