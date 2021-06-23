@@ -1,0 +1,42 @@
+#html{
+    scroll-behavior: smooth;
+    background-color: #f8f9fa!important;
+}
+
+#home_nav{
+    width: 100%;
+}
+
+#home_nav a{
+    color:burlywood;
+    font-family: monospace;
+}
+
+#logo{
+    font-size: xx-large;
+    font-family: Cursive;
+}
+
+/*body{
+    background-image:url(../resources/IMG_E5203.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+#background_photo{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+footer{
+    background-color: #f8f9fa!important;
+    margin: 0;
+}
+
+#copyright{
+    color:burlywood;
+    font-family: monospace;
+    font-size: xx-large;
+}
