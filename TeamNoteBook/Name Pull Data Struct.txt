@@ -1,0 +1,84 @@
+﻿Onclicked event calls a single function that handles each question
+
+
+Start Quiz Button
+onclicked: ->  startQuiz()
+
+
+Question 1
+        Answer Male, Female, Skip
+                onclicked: ->firstAnswerSetGenderTag(int answerID)
+
+
+Question 2-10
+        Answer A,B,C,D, Skip
+                onclicked: ->MainQuestionSubmitAnswer(int questionID, int answerID, int genderTag) 
+
+
+
+
+
+
+Data Struct:
+
+
+-User has temp array created and attached on page execution
+-Answering questions will add names(strings) to this temp array
+-After the final Question is answered a random name is selected from this temp array
+
+
+string tempUserArray[x];
+string tempNameFile[x];
+Struct name()
+string textname;
+int gTag;
+int userGTag;
+
+
+void setUserGTag(int userChoice){
+        userGtag = userChoice;
+        
+}
+
+
+void loadGitHubFile(int questionId){
+        
+##Read github text and store into tempNameFile[]
+Switch Case
+        1-10 (questionID);
+                for(int i = 0; i < file.length(); i++){
+                        tempNameFile[i] = fileRawLineInput;
+}
+}
+
+
+string getNameFromTxtFile(string tempNames[], int genderTag){
+
+
+name = tempNames[math.randomIntInRange()];
+        if(genderTag = name.gTag){
+                return name;
+}else{
+        getNameFromTxtFile(tempNames[], genderTag)
+
+
+}
+
+
+}
+
+
+
+
+void mainQuestionSubmitAnswer(){
+        ##call to initialize githubFile
+loadGitHubFile();
+
+
+        ##select 5 random names from temp file
+for(int i = 0; i < 5; i++){
+tempUserArray[i+tempUserArray.length()] = getNameFromTxtFile(tempNameFile, userGTag);
+}
+
+
+}
