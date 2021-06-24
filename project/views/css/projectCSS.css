@@ -1,7 +1,9 @@
-#html{
+html{
     scroll-behavior: smooth;
     background-color: #f8f9fa!important;
 }
+
+/*------NAVBAR------*/
 
 #home_nav{
     width: 100%;
@@ -17,18 +19,46 @@
     font-family: Cursive;
 }
 
-/*body{
-    background-image:url(../resources/IMG_E5203.JPG);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
+/*------BANNER------*/
 
-#background_photo{
-    max-width: 100%;
-    height: auto;
-    width: auto;
+.banner-div{
+    width:100%;
+    height:100vh; /*sized to 100% of viewport (new terminology)*/
+    background:url(../resources/IMG_E5203.JPG);
+    background-size:cover;
 }
+
+/*------DECK CSS------*/
+
+.card-deck-wrapper{
+    height:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+/*------QUIZ QUESTIONS------*/
+
+#choice1{
+    background-color: #f8f9fa!important;
+}
+#choice2{
+    background-color: #f8f9fa!important;
+}
+#choice3{
+    background-color: #f8f9fa!important;
+    display: none;
+}
+#choice4{
+    background-color: #f8f9fa!important;
+    display: none;
+}
+#choice5{
+    background-color: #f8f9fa!important;
+    display: none;
+}
+
+/*------FOOTER------*/
 
 footer{
     background-color: #f8f9fa!important;
