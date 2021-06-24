@@ -72,13 +72,16 @@ name = tempNames[math.randomIntInRange()];
 
 void mainQuestionSubmitAnswer(){
         ##call to initialize githubFile
-loadGitHubFile();
+        loadGitHubFile();
 
 
         ##select 5 random names from temp file
-for(int i = 0; i < 5; i++){
-tempUserArray[i+tempUserArray.length()] = getNameFromTxtFile(tempNameFile, userGTag);
-}
+        for(int i = 0; i < 5; i++){
+        tempUserArray[i+tempUserArray.length()] = getNameFromTxtFile(tempNameFile, userGTag);
+        }
+        
+        ##start next question
+        startnextQuestion();
 
 
 }
