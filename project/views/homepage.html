@@ -13,72 +13,84 @@
     </head>
     <body>
         <!-- NAVBAR -->
-        <div class="nav-area">
-            <nav id="home_nav" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a id="logo" class="navbar-brand" href="#">Pet Name Generator</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link px-3" href="homepage.html">Home</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link" href="about_us.html">About Us</a>
-                            </li>
-                            <li class="nav-item px-3">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                        </ul>
+        <header>
+            <div class="nav-area">
+                <nav id="home_nav" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a id="logo" class="navbar-brand" href="#">Pet Name Generator</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link px-3" href="homepage.html">Home</a>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <a class="nav-link" href="about_us.html">About Us</a>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
-        </div>
+                </nav>
+            </div>
         <!-- SECTION WITH BACKGROUND BANNER -->
-        <div class="banner-div">
-            <!-- QUESTION BOX -->
-            <div class="card-deck-wrapper">
-                <div class="card-group bg-light" id="question box">
-                    <!-- CHOICE 1 -->
-                    <div class="card bg-light" id="choice1">
-                        <img class="card-img-top" src="#" alt="choice1 img">
-                        <div class="card-body bg-light">
-                            <button class="card-title center">Start Quiz</h2>
+            <div class="p-5 bg-image text-center" id="banner">
+                <!-- QUESTION BOX -->
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <span class="border border-white">
+                        <div class="jumbotron jumbotron-fluid bg-dark">
+                            <h1 class="display-4" id="question">Quiz</h1>
+                    </span>
+                        <div class="card-group" id="question box">
+                            <!-- CHOICE 1 -->
+                            <div class="card text-center" id="choice1">
+                                <img class="card-img-top" src="#" alt="choice1 img">
+                                <div class="card-body bg-dark">
+                                    <button type="button" class="btn btn-outline-light btn-block" onclick="questionAnswer(1)">Start Quiz</button>
+                                </div>
+                            </div>
+                            <!-- CHOICE 2 -->
+                            <div class="card text-center" id="choice2">
+                                <img class="card-img-top" src="#" alt="choice2 img">
+                                <div class="card-body bg-dark">
+                                    <button type="button" class="btn btn-outline-light btn-block" onclick="questionAnswer(2)">Skip Quiz</button>
+                                </div>
+                            </div>
+                            <!-- CHOICE 3 -->
+                            <div class="card text-center" id="choice3">
+                                <img class="card-img-top" src="#" alt="choice3 img">
+                                <div class="card-body bg-dark">
+                                    <button type="button" class="btn btn-outline-light btn-block" onclick="questionAnswer(3)">Choice 3</button>
+                                </div>
+                            </div>
+                            <!-- CHOICE 4 -->
+                            <div class="card text-center" id="choice4">
+                                <img class="card-img-top" src="#" alt="choice4 img">
+                                <div class="card-body bg-dark">
+                                    <button type="button" class="btn btn-outline-light btn-block" onclick="questionAnswer(4)">Choice 4</button>
+                                </div>
+                            </div>
+                            <!-- CHOICE 5 -->
+                            <div class="card text-center" id="choice5">
+                                <img class="card-img-top" src="#" alt="choice5 img">
+                                <div class="card-body bg-dark">
+                                    <button type="button" class="btn btn-outline-light btn-block" onclick="questionAnswer(5)">Choice 5</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- CHOICE 2 -->
-                    <div class="card bg-light" id="choice2">
-                        <img class="card-img-top" src="#" alt="choice2 img">
-                        <div class="card-body bg-light">
-                            <h2 class="card-title center">Skip Quiz</h2>
+                        <br>
+                        <div class="bg-dark">
+                            <button type="button" class="btn btn-outline-light btn-block" onclick="questionAnswer(0)">Skip Question</button>
                         </div>
-                    </div>
-                    <!-- CHOICE 3 -->
-                    <div class="card bg-light" id="choice3">
-                        <img class="card-img-top" src="#" alt="choice3 img">
-                        <div class="card-body bg-light">
-                            <h2 class="card-title center">None</h2>
-                        </div>
-                    </div>
-                    <!-- CHOICE 4 -->
-                    <div class="card bg-light" id="choice4">
-                        <img class="card-img-top" src="#" alt="choice4 img">
-                        <div class="card-body bg-light">
-                            <h2 class="card-title center">None</h2>
-                        </div>
-                    </div>
-                    <!-- CHOICE 5 -->
-                    <div class="card bg-light" id="choice5">
-                        <img class="card-img-top" src="#" alt="choice5 img">
-                        <div class="card-body bg-light">
-                            <h2 class="card-title center">None</h2>
-                        </div>
+                        <br>
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     </body>
     <footer class="bg-light">
         <div id="copyright" class="text-center">
