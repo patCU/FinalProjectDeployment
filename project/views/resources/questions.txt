@@ -1,0 +1,3 @@
+What is your pet's gender?,2,Male,Female
+Do you like longer names or shorter names?,2,Longer,Shorter
+What kind of personality does your pet have?,4,Crazy,Lazy,Sweet,Smart

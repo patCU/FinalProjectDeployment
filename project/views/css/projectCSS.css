@@ -1,4 +1,4 @@
-html{
+tml{
     scroll-behavior: smooth;
     background-color: #f8f9fa!important;
 }
@@ -56,15 +56,15 @@ html{
 }
 #choice3{
     background-color: #f8f9fa!important;
-    /* display: none; */
+    display: none;
 }
 #choice4{
     background-color: #f8f9fa!important;
-    /* display: none; */
+    display: none;
 }
 #choice5{
     background-color: #f8f9fa!important;
-    /* display: none; */
+    display: none;
 }
 
 /*------TEXTBOX------*/
