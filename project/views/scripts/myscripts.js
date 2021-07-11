@@ -6,5 +6,6 @@ It reads values separated by a delimiter from a text file to populate the HTML a
 var COUNT = 0;
 
 function questionAnswer(answer){
+    var line = '';
     
 }

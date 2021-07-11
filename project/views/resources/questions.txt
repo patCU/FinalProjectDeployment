@@ -1,3 +1,10 @@
 What is your pet's gender?,2,Male,Female
 Do you like longer names or shorter names?,2,Longer,Shorter
 What kind of personality does your pet have?,4,Crazy,Lazy,Sweet,Smart
+Do you want a name conducive to a nickname?,2,Yes,No
+Do you like older, more traditional pet names?,2,Yes,No
+Do you like typical, more common pet names?,2,Yes,No
+What species is your pet?,4,Dog,Cat,Rodent,Bird
+Do you like food-related names?,2,Yes,No
+What size is your pet?,3,Small,Average,Large
+Do you like names associated with colors?,Yes,No
