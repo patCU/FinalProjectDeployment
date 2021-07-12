@@ -10,8 +10,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>      
         <link href="css/projectCSS.css" rel="stylesheet">
+        <script src="scripts/myscripts.js"></script>
     </head>
-    <body>
+    <body onload="loadCSS()">
         <!-- NAVBAR -->
         <header>
             <div class="nav-area">
@@ -42,7 +43,7 @@
                 <!-- QUESTION BOX -->
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <span class="border border-white">
-                        <div class="jumbotron jumbotron-fluid bg-dark">
+                        <div class="jumbotron jumbotron-fluid bg-dark" id="ans_background">
                             <h1 class="display-4" id="question">Quiz</h1>
                     </span>
                         <div class="card-group" id="question box">
@@ -57,7 +58,7 @@
                             <div class="card text-center" id="choice2">
                                 <img class="card-img-top" src="#" id="choice2_img" alt="choice2 img">
                                 <div class="card-body bg-dark">
-                                    <button type="button" class="btn btn-outline-light btn-block" id="choice2_btn" onclick="questionAnswer(2)">Skip Quiz</button>
+                                    <button type="button" class="btn btn-outline-light btn-block" id="choice2_btn" onclick="questionAnswer(2)">Choice 2</button>
                                 </div>
                             </div>
                             <!-- CHOICE 3 -->
@@ -74,17 +75,10 @@
                                     <button type="button" class="btn btn-outline-light btn-block" id="choice4_btn" onclick="questionAnswer(4)">Choice 4</button>
                                 </div>
                             </div>
-                            <!-- CHOICE 5 -->
-                            <div class="card text-center" id="choice5">
-                                <img class="card-img-top" src="#" id="choice5_img" alt="choice5 img">
-                                <div class="card-body bg-dark">
-                                    <button type="button" class="btn btn-outline-light btn-block" id="choice5_btn" onclick="questionAnswer(5)">Choice 5</button>
-                                </div>
-                            </div>
                         </div>
                         <br>
                         <div class="bg-dark">
-                            <button type="button" class="btn btn-outline-light btn-block" onclick="questionAnswer(0)">Skip Question</button>
+                            <button type="button" class="btn btn-outline-light btn-block" id="skip" onclick="questionAnswer(0)">Skip Quiz</button>
                         </div>
                         <br>
                     </div>

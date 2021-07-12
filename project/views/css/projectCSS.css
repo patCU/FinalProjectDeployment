@@ -1,4 +1,4 @@
-tml{
+html{
     scroll-behavior: smooth;
     background-color: #f8f9fa!important;
 }
@@ -40,6 +40,8 @@ tml{
 
 #question{
     color:burlywood;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .card{
@@ -50,9 +52,11 @@ tml{
 
 #choice1{
     background-color: #f8f9fa!important;
+    display: none;
 }
 #choice2{
     background-color: #f8f9fa!important;
+    display: none;
 }
 #choice3{
     background-color: #f8f9fa!important;
@@ -62,9 +66,9 @@ tml{
     background-color: #f8f9fa!important;
     display: none;
 }
-#choice5{
-    background-color: #f8f9fa!important;
-    display: none;
+
+#ans_background{
+    min-width: 500px;
 }
 
 /*------TEXTBOX------*/
