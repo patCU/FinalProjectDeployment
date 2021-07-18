@@ -2,6 +2,50 @@
 This document contains all the scripts for the user interaction with the question system.
 It reads values separated by a delimiter from a text file to populate the HTML and adjust the boostrap card deck
 */
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class newClient{
+  constructor(petName, gender, nameLength, personality, nickname, oldName, typical, petType, foodRelate, petSize, color){
+    this.petName = petName;
+    this.gender = gender;
+    this.nameLength = nameLength;
+    this.personality = personality;
+    this.nickname = nickname;
+    this.oldName = oldName;
+    this.typical = typical;
+    this.petType = petType;
+    this.foodRelate = foodRelate;
+    this.petSize = petSize;
+    this.color = color;
+  }
+  compareClients(client_2){
+    const client_1_array = this.convert2Array();
+    const client_2_array = client_2.convert2Array();
+    var similarities = 0;
+    for(let i=1; i < 10; i++){
+      if(client_1_array[i] == client_2_array[i]){
+        similarities++;
+      }
+      console.log(client_1_array[i] + " " + client_2_array[i]);
+
+    }
+    return similarities;
+  }
+  convert2Array(){
+    return [this.petName,this.gender,this.nameLength,this.personality,this.nickname,this.oldName,this.typical,this.petType,this.foodRelate,this.petSize,this.color];
+  }
+}
+
+var userClientResults =  new newClient();
+
+function generateRandomInt(maxValueRandom){
+   return Math.floor(Math.random() * maxValueRandom);
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 var questions = [
@@ -14,7 +58,7 @@ var questions = [
     {question: "Do you like typical, more common pet names?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "", img_2: ""},
     {question: "What species is your pet?",num_cards: 4, ans_1: "Dog", ans_2: "Cat", ans_3: "Rodent", ans_4: "Bird", img_1: "", img_2: "", img_3: "", img4_4: ""},
     {question: "Do you like food-related names?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "", img_2: ""},
-    {question: "What size is your pet?",num_cards: 3, ans_1: "Small", ans_2: "Average", ans_3: "Large", img_1: "", img_2: "", img_3: ""},
+    {question: "What size is your pet?",num_cards: 3, ans_1: "Small", ans_2: "Medium", ans_3: "Large", img_1: "", img_2: "", img_3: ""},
     {question: "Do you like names associated with colors?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "", img_2: ""},
 ];
 
@@ -101,7 +145,7 @@ function displayName(){
     document.getElementById('choice4').style.display = 'none';
     document.getElementById('skip').style.display = 'none';
 
-    var name = 'dummy_name';
+
 
 
   fetch('https://docker-pet-name-generator.herokuapp.com/getAllPets')
@@ -109,51 +153,37 @@ function displayName(){
       return(res.json());
     })
     .then(function(out){
+      var name = 'dummy_name';
       console.log(out)
+      document.getElementById('question').innerHTML = 'Your New Pet Name:';
+
+      answerlist[3] = answerlist[3].toLowerCase();
+      answerlist[7] = answerlist[7].toLowerCase();
+      answerlist[9] = answerlist[9].toLowerCase();
+      var userAnswers = new newClient(...answerlist);
+      var totalSims = 0;
+      out.forEach(row => {
+        var rowAnswers = new newClient(row.pet_name, (row.gender == 0 ? "Female" : "Male"), (row.name_length >= 6 ? "Longer" : "Shorter"), row.pet_personality, (row.nickname == 'nickname' ? "Yes" : "No") , (row.old_name == 'new' ? "No" : "Yes"), (row.typ_name == 'unique' ? "No" : "Yes"), row.pet_type , (row.food_relate == 'food' ? "Yes" : "No"), row.pet_size, (row.color_ass == 'color' ? "Yes" : "No"));
+        console.log(row.pet_name);
+        console.log(userAnswers.compareClients(rowAnswers));
+        totalSims += Math.pow(userAnswers.compareClients(rowAnswers), 6);
+
+
+      });
+
+      var pieLocation = generateRandomInt(totalSims);
+      console.log(pieLocation);
+      out.some(row => {
+        var rowAnswers = new newClient(row.pet_name, (row.gender == 0 ? "Female" : "Male"), (row.name_length >= 6 ? "Longer" : "Shorter"), row.pet_personality, (row.nickname == 'nickname' ? "Yes" : "No") , (row.old_name == 'new' ? "No" : "Yes"), (row.typ_name == 'unique' ? "No" : "Yes"), row.pet_type , (row.food_relate == 'food' ? "Yes" : "No"), row.pet_size, (row.color_ass == 'color' ? "Yes" : "No"));
+
+        pieLocation -= Math.pow(userAnswers.compareClients(rowAnswers), 6);
+         if(pieLocation <= 0){
+           document.getElementById('answer').innerHTML = (row.pet_name);
+           //replaced for Each with some    some requires return values to break out of loop, true to break
+           return true;
+         }else{return false;}
+
+      });
+
     });
-
-
-    document.getElementById('question').innerHTML = 'Your New Pet Name:';
-    document.getElementById('answer').innerHTML = (name);
-}
-
-
-
-
-
-
-
-
-
-function generateRandomInt(maxValueRandom){
-   return Math.floor(Math.random() * maxValueRandom);
-}
-
-function aquireRandomNameFromDatabase(){}
-
-class newClient{
-  constructor(petName, gender, nameLength, personality, nickname, oldName, typical, petType, foodRelate, petSize, color){
-    this.petName = petName;
-    this.gender = gender;
-    this.nameLength = nameLength;
-    this.personality = personality;
-    this.nickname = nickname;
-    this.oldName = oldName;
-    this.typical = typical;
-    this.petType = petType;
-    this.foodRelate = foodRelate;
-    this.petSize = petSize;
-    this.color = color;
-  }
-}
-
-var userClient =  new newClient();
-
-
-function set_userClass_Attribute(){}
-
-
-function fillClientArray(userClient){
-  const generatedNames = [];
-
 }
