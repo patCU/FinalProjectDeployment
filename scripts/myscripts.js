@@ -176,7 +176,7 @@ function displayName(){
       out.some(row => {
         var rowAnswers = new newClient(row.pet_name, (row.gender == 0 ? "Female" : "Male"), (row.name_length >= 6 ? "Longer" : "Shorter"), row.pet_personality, (row.nickname == 'nickname' ? "Yes" : "No") , (row.old_name == 'new' ? "No" : "Yes"), (row.typ_name == 'unique' ? "No" : "Yes"), row.pet_type , (row.food_relate == 'food' ? "Yes" : "No"), row.pet_size, (row.color_ass == 'color' ? "Yes" : "No"));
 
-        pieLocation -= (row.gender == userAnswers.gender ? Math.pow(userAnswers.compareClients(rowAnswers), 6) : 0);
+        pieLocation -= (rowAnswers.gender == userAnswers.gender ? Math.pow(userAnswers.compareClients(rowAnswers), 6) : 0);
          if(pieLocation <= 0){
            document.getElementById('answer').innerHTML = (row.pet_name);
            //replaced for Each with some    some requires return values to break out of loop, true to break
