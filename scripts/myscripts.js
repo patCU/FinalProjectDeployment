@@ -1,6 +1,6 @@
 /*
 This document contains all the scripts for the user interaction with the question system.
-It reads values separated by a delimiter from a text file to populate the HTML and adjust the boostrap card deck
+It reads values from a JSON object to populate the HTML and adjust the boostrap card deck
 */
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -190,9 +190,6 @@ function displayName(){
            //replaced for Each with some    some requires return values to break out of loop, true to break
            return true;
          }else{return false;}
-
-
-
       });
 }
     });
