@@ -3,6 +3,7 @@ This document contains all the scripts for the user interaction with the questio
 It reads values separated by a delimiter from a text file to populate the HTML and adjust the boostrap card deck
 */
 
+
 var questions = [
     {question: "Quiz",num_cards: 2, ans_1: "Start Quiz", ans_2: "Skip Quiz", img_1: "", img_2: ""},
     {question: "What is your pet's gender?",num_cards: 2, ans_1: "Male", ans_2: "Female", img_1: "", img_2: ""},
@@ -101,8 +102,58 @@ function displayName(){
     document.getElementById('skip').style.display = 'none';
 
     var name = 'dummy_name';
-    var name_display = '<h1 class="display-4">' + name + '</h1>';
+
+
+  fetch('https://docker-pet-name-generator.herokuapp.com/getAllPets')
+    .then(function(res){
+      return(res.json());
+    })
+    .then(function(out){
+      console.log(out)
+    });
+
 
     document.getElementById('question').innerHTML = 'Your New Pet Name:';
-    document.getElementById('ans_background').innerHTML(name_display);
+    document.getElementById('answer').innerHTML = (name);
+}
+
+
+
+
+
+
+
+
+
+function generateRandomInt(maxValueRandom){
+   return Math.floor(Math.random() * maxValueRandom);
+}
+
+function aquireRandomNameFromDatabase(){}
+
+class newClient{
+  constructor(petName, gender, nameLength, personality, nickname, oldName, typical, petType, foodRelate, petSize, color){
+    this.petName = petName;
+    this.gender = gender;
+    this.nameLength = nameLength;
+    this.personality = personality;
+    this.nickname = nickname;
+    this.oldName = oldName;
+    this.typical = typical;
+    this.petType = petType;
+    this.foodRelate = foodRelate;
+    this.petSize = petSize;
+    this.color = color;
+  }
+}
+
+var userClient =  new newClient();
+
+
+function set_userClass_Attribute(){}
+
+
+function fillClientArray(userClient){
+  const generatedNames = [];
+
 }

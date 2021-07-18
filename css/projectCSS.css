@@ -38,8 +38,13 @@ html{
     align-items: center;
 }
 
-#question{
+#question {
     color:burlywood;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#answer {
+    color:MediumAquaMarine;
     margin-left: 5%;
     margin-right: 5%;
 }
