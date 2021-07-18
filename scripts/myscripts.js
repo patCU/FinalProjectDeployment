@@ -104,5 +104,5 @@ function displayName(){
     var name_display = '<h1 class="display-4">' + name + '</h1>';
 
     document.getElementById('question').innerHTML = 'Your New Pet Name:';
-    document.getElementById('ans_background').appendChild(name_display);
+    document.getElementById('ans_background').innerHTML(name_display);
 }
