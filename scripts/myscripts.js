@@ -76,6 +76,7 @@ function loadCSS(){
 function questionAnswer(answer){
     //If user skips quiz entirely
     if (COUNT == 0 && answer == 0){
+        answerlist = [null,null,null,null,null,null,null,null,null,null];
         displayName();
     }else{
         if (answer == 0){
@@ -157,6 +158,13 @@ function displayName(){
       console.log(out)
       document.getElementById('question').innerHTML = 'Your New Pet Name:';
 
+
+      if (COUNT == 0){
+          var tempRow = out[generateRandomInt(out.length)];
+          document.getElementById('answer').innerHTML = (tempRow.pet_name);
+      }else{
+
+
       answerlist[3] = answerlist[3].toLowerCase();
       answerlist[7] = answerlist[7].toLowerCase();
       answerlist[9] = answerlist[9].toLowerCase();
@@ -165,9 +173,9 @@ function displayName(){
       out.forEach(row => {
         var rowAnswers = new newClient(row.pet_name, (row.gender == 0 ? "Female" : "Male"), (row.name_length >= 6 ? "Longer" : "Shorter"), row.pet_personality, (row.nickname == 'nickname' ? "Yes" : "No") , (row.old_name == 'new' ? "No" : "Yes"), (row.typ_name == 'unique' ? "No" : "Yes"), row.pet_type , (row.food_relate == 'food' ? "Yes" : "No"), row.pet_size, (row.color_ass == 'color' ? "Yes" : "No"));
         console.log(row.pet_name);
-        console.log(userAnswers.compareClients(rowAnswers));
-        totalSims += (row.gender == userAnswers.gender ? Math.pow(userAnswers.compareClients(rowAnswers), 6) : 0);
 
+        totalSims += (rowAnswers.gender == userAnswers.gender ? Math.pow(userAnswers.compareClients(rowAnswers), 6) : 0);
+        console.log(totalSims);
 
       });
 
@@ -183,7 +191,11 @@ function displayName(){
            return true;
          }else{return false;}
 
-      });
 
+
+      });
+}
     });
+
+
 }
