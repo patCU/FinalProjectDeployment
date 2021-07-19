@@ -23,13 +23,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link px-3" href="index.php">Home</a>
+                                <a class="nav-link px-3" href="homepage.html">Home</a>
                             </li>
                             <li class="nav-item px-3">
-                                <a class="nav-link" href="about_us.php">About Us</a>
+                                <a class="nav-link" href="about_us.html">About Us</a>
                             </li>
                             <li class="nav-item px-3">
-                                <a class="nav-link" href="contact.php">Contact</a>
+                                <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -37,7 +37,17 @@
             </nav>
         </div>
          <div class="p-5 bg-image text-center" id="banner">
-
+            <main>
+                <div class="textbox" style="width: 600px; height: auto; margin-top: 100px">
+                    <form class="contact-form" action="contact.php" method="post">
+                        <input type="text" name="name"  class="contactform" placeholder="Full Name"> <br> <br>
+                        <input type="text" name="email"  class="contactform" placeholder="Email"> <br> <br>
+                        <input type="text" name="subject"  class="contactform" placeholder="Subject"> <br> <br>
+                        <textarea name="message" class="contactform" placeholder="Message" row="6" required> </textarea><br> <br>
+                        <button type="submit" name="submit">SEND</button>
+                    </form>
+                </div>
+            </main>
         </div>
     </body>
     <footer class="bg-light">
@@ -45,4 +55,4 @@
             © 2021 Copyright: The Companions
         </div>
     </footer> 
-</html> 
+</html>
