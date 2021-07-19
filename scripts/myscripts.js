@@ -49,17 +49,17 @@ function generateRandomInt(maxValueRandom){
 
 
 var questions = [
-    {question: "Quiz",num_cards: 2, ans_1: "Start Quiz", ans_2: "Skip Quiz", img_1: "", img_2: ""},
-    {question: "What is your pet's gender?",num_cards: 2, ans_1: "Male", ans_2: "Female", img_1: "", img_2: ""},
-    {question: "Do you like longer names or shorter names?",num_cards: 2, ans_1: "Longer", ans_2: "Shorter", img_1: "", img_2: ""},
-    {question: "What kind of personality does your pet have?",num_cards: 4, ans_1: "Crazy", ans_2: "Lazy", ans_3: "Sweet", ans_4: "Smart", img_1: "", img_2: "", img_3: "", img4_4: ""},
-    {question: "Do you like nicknames?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "", img_2: ""},
-    {question: "Do you like older, more traditional pet names?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "", img_2: ""},
-    {question: "Do you like typical, more common pet names?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "", img_2: ""},
-    {question: "What species is your pet?",num_cards: 4, ans_1: "Dog", ans_2: "Cat", ans_3: "Rodent", ans_4: "Bird", img_1: "", img_2: "", img_3: "", img4_4: ""},
-    {question: "Do you like food-related names?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "", img_2: ""},
-    {question: "What size is your pet?",num_cards: 3, ans_1: "Small", ans_2: "Medium", ans_3: "Large", img_1: "", img_2: "", img_3: ""},
-    {question: "Do you like names associated with colors?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "", img_2: ""},
+    {question: "Quiz",num_cards: 2, ans_1: "Start Quiz", ans_2: "Skip Quiz",}, 
+    {question: "What is your pet's gender?",num_cards: 2, ans_1: "Male", ans_2: "Female", img_1: "resources/male.jpg", img_2: "resources/female.jpg"},
+    {question: "Do you like longer names or shorter names?",num_cards: 2, ans_1: "Longer", ans_2: "Shorter", img_1: "resources/long.jpg", img_2: "resources/short.jpg"},
+    {question: "What kind of personality does your pet have?",num_cards: 4, ans_1: "Crazy", ans_2: "Lazy", ans_3: "Sweet", ans_4: "Smart", img_1: "resources/crazy.jpg", img_2: "resources/lazy.jpg", img_3: "resources/sweet.jpg", img_4: "resources/smart.jpg"},
+    {question: "Do you like nicknames?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "resources/yes1.jpg", img_2: "resources/no1.jpg"},
+    {question: "Do you like older, more traditional pet names?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "resources/yes2.jpg", img_2: "resources/no2.jpg"},
+    {question: "Do you like typical, more common pet names?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "resources/yes3.jpg", img_2: "resources/no3.jpg"},
+    {question: "What species is your pet?",num_cards: 4, ans_1: "Dog", ans_2: "Cat", ans_3: "Rodent", ans_4: "Bird", img_1: "resources/dog.jpg", img_2: "resources/cat.jpg", img_3: "resources/hamster.jpg", img_4: "resources/bird.jpg"},
+    {question: "Do you like food-related names?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "resources/yes4.jpg", img_2: "resources/no4.jpg"},
+    {question: "What size is your pet?",num_cards: 3, ans_1: "Small", ans_2: "Average", ans_3: "Large", img_1: "resources/small.jpg", img_2: "resources/average.jpg", img_3: "resources/large.jpg"},
+    {question: "Do you like names associated with colors?",num_cards: 2, ans_1: "Yes", ans_2: "No", img_1: "resources/yes5.jpg", img_2: "resources/no5.jpg"},
 ];
 
 const questions_length = 11;
