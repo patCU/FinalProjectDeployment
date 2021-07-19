@@ -38,19 +38,24 @@ html{
     align-items: center;
 }
 
-#question {
+#question{
     color:burlywood;
     margin-left: 5%;
     margin-right: 5%;
 }
+
 #answer {
     color:MediumAquaMarine;
     margin-left: 5%;
     margin-right: 5%;
+
 }
+
+
 
 .card{
     min-width: 250px;
+    max-width: 500px;
 }
 
 /*------QUIZ QUESTIONS------*/
@@ -107,8 +112,16 @@ html{
 
 /*------CONTACTFORM------*/
 .contactform{
-   
+   width: 400px;
+   background: transparent;
+   border: none;
+   outline: none;
+   border-bottom: 1px solid rgb(202, 202, 202);
+   color: #f8f9fa;
+   font-family: "Times New Roman", Times, serif;
+   font-size: 18px;
 }
+
 
 /*------FOOTER------*/
 
