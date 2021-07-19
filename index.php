@@ -51,7 +51,7 @@
                         <div class="card-group" id="question box">
                             <!-- CHOICE 1 -->
                             <div class="card text-center" id="choice1">
-                                <img class="card-img-top" src="#" id="choice1_img" alt="choice1 img">
+                                <img class="card-img-top" src="resources/question.jpg" id="choice1_img" alt="choice1 img">
                                 <div class="card-body bg-dark">
                                     <button type="button" class="btn btn-outline-light btn-block" id="choice1_btn" onclick="questionAnswer(1)">Start Quiz</button>
                                 </div>
