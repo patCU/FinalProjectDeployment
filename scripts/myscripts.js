@@ -75,6 +75,8 @@ function loadCSS(){
 
 function questionAnswer(answer){
     //If user skips quiz entirely
+    var box_width = questions[COUNT + 1].num_cards * 250;
+    document.getElementById('ans_background').style.maxWidth = toString(box_width + 'px');
     if (COUNT == 0 && answer == 0){
         answerlist = [null,null,null,null,null,null,null,null,null,null];
         displayName();

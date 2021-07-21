@@ -41,7 +41,7 @@
         <!-- SECTION WITH BACKGROUND BANNER -->
             <div class="p-5 bg-image text-center" id="banner">
                 <!-- QUESTION BOX -->
-                <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="d-flex justify-content-center align-items-center h-80">
                     <span class="border border-white">
                         <div class="jumbotron jumbotron-fluid bg-dark" id="ans_background">
                             <h1 class="display-4" id="question">Quiz</h1>
