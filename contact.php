@@ -41,8 +41,8 @@
             <div class="textbox" style="width: 600px; height:auto; margin-top: 100px">
                 <h1>Contact Us!</h1>
                 <form class="contact-form" method="POST" enctype="text/plain" name="EmailSend"> <br>
-                    <input type="text" name="name"  class="contactform" placeholder="Full Name"> <br><br>
-                    <textarea name="message" class="contactform" placeholder="Message"></textarea><br> <br>
+                    <input type="text" name="name"  class="contactform" placeholder="Full Name" id="name"> <br><br>
+                    <textarea name="message" class="contactform" placeholder="Message" id="message"></textarea><br> <br>
                     <br><br> <button type="button" value="Submit" onclick="insert_User_Message()">Submit</button> 
                 </form>
             </div>
