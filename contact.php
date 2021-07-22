@@ -10,6 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>      
         <link href="css/projectCSS.css" rel="stylesheet">
+        <script src="scripts/myscripts.js"></script>
     </head>
     <body>
         <!-- NAVBAR -->
@@ -42,7 +43,7 @@
                 <form class="contact-form" action="mailto:pet.gen42@gmail.com" method="POST" enctype="text/plain" name="EmailSend"> <br>
                     <input type="text" name="name"  class="contactform" placeholder="Full Name" name="Name "> <br><br>
                     <textarea name="message" class="contactform" placeholder="Message" required name="Message "></textarea><br> <br>
-                    <br><br> <input type="submit" value="Submit"> 
+                    <br><br> <input type="submit" value="Submit" onclick="insert_User_Message()"> 
                 </form>
             </div>
             </main>
