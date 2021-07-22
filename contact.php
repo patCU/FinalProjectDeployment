@@ -40,9 +40,9 @@
          <div class="p-5 bg-image text-center" id="banner">
             <div class="textbox" style="width: 600px; height:auto; margin-top: 100px">
                 <h1>Contact Us!</h1>
-                <form class="contact-form" action="mailto:pet.gen42@gmail.com" method="POST" enctype="text/plain" name="EmailSend"> <br>
-                    <input type="text" name="name"  class="contactform" placeholder="Full Name" name="Name "> <br><br>
-                    <textarea name="message" class="contactform" placeholder="Message" required name="Message "></textarea><br> <br>
+                <form class="contact-form" method="POST" enctype="text/plain" name="EmailSend"> <br>
+                    <input type="text" name="name"  class="contactform" placeholder="Full Name"> <br><br>
+                    <textarea name="message" class="contactform" placeholder="Message"></textarea><br> <br>
                     <br><br> <input type="submit" value="Submit" onclick="insert_User_Message()"> 
                 </form>
             </div>
