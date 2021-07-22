@@ -37,16 +37,14 @@
             </nav>
         </div>
          <div class="p-5 bg-image text-center" id="banner">
-            <main>
-                <div class="textbox" style="width: 600px; height: auto; margin-top: 100px">
-                    <form class="contact-form" action="contact.php" method="post">
-                        <input type="text" name="name"  class="contactform" placeholder="Full Name"> <br> <br>
-                        <input type="text" name="email"  class="contactform" placeholder="Email"> <br> <br>
-                        <input type="text" name="subject"  class="contactform" placeholder="Subject"> <br> <br>
-                        <textarea name="message" class="contactform" placeholder="Message" row="6" required> </textarea><br> <br>
-                        <button type="submit" name="submit">SEND</button>
-                    </form>
-                </div>
+            <div class="textbox" style="width: 600px; height:auto; margin-top: 100px">
+                <h1>Contact Us!</h1>
+                <form class="contact-form" action="mailto:pet.gen42@gmail.com" method="POST" enctype="text/plain" name="EmailSend"> <br>
+                    <input type="text" name="name"  class="contactform" placeholder="Full Name" name="Name "> <br><br>
+                    <textarea name="message" class="contactform" placeholder="Message" required name="Message "></textarea><br> <br>
+                    <br><br> <input type="submit" value="Submit"> 
+                </form>
+            </div>
             </main>
         </div>
     </body>
