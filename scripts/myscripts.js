@@ -196,8 +196,8 @@ function displayName(){
 }
 
 function insert_User_Message(){
-  var name = document.getElementById('name');
-  var message = document.getElementById('message');
+  var name = document.getElementById('name').value;
+  var message = document.getElementById('message').value;
   console.log(name);
   console.log(message);
 }
