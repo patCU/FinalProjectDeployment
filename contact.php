@@ -43,7 +43,7 @@
                 <form class="contact-form" method="POST" enctype="text/plain" name="EmailSend"> <br>
                     <input type="text" name="name"  class="contactform" placeholder="Full Name"> <br><br>
                     <textarea name="message" class="contactform" placeholder="Message"></textarea><br> <br>
-                    <br><br> <input type="submit" value="Submit" onclick="insert_User_Message()"> 
+                    <br><br> <button type="button" value="Submit" onclick="insert_User_Message()">Submit</button> 
                 </form>
             </div>
             </main>
