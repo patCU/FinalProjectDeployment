@@ -49,7 +49,7 @@ function generateRandomInt(maxValueRandom){
 
 
 var questions = [
-    {question: "Quiz",num_cards: 2, ans_1: "Start Quiz", ans_2: "Skip Quiz",}, 
+    {question: "Quiz",num_cards: 2, ans_1: "Start Quiz", ans_2: "Skip Quiz",},
     {question: "What is your pet's gender?",num_cards: 2, ans_1: "Male", ans_2: "Female", img_1: "resources/male.jpg", img_2: "resources/female.jpg"},
     {question: "Do you like longer names or shorter names?",num_cards: 2, ans_1: "Longer", ans_2: "Shorter", img_1: "resources/long.jpg", img_2: "resources/short.jpg"},
     {question: "What kind of personality does your pet have?",num_cards: 4, ans_1: "Crazy", ans_2: "Lazy", ans_3: "Sweet", ans_4: "Smart", img_1: "resources/crazy.jpg", img_2: "resources/lazy.jpg", img_3: "resources/sweet.jpg", img_4: "resources/smart.jpg"},
@@ -195,9 +195,41 @@ function displayName(){
     });
 }
 
+
+
 function insert_User_Message(){
+
+
   var name = document.getElementById('name').value;
   var message = document.getElementById('message').value;
   console.log(name);
   console.log(message);
+
+
+  fetch("https://docker-pet-name-generator.herokuapp.com/create_UserMessage", {
+
+    // Adding method type
+    method: "POST",
+
+    // Adding body or contents to send
+    body: JSON.stringify({name: name , message: message}),
+
+    // Adding headers to the request
+    headers: {
+        "Content-type": "application/json; charset=UTF-8"
+    }
+})
+
+// Converting to JSON
+.then(response => response.text())
+
+// Displaying results to console
+.then(json => console.log(json));
+
+
+
+
+
+
+
 }
