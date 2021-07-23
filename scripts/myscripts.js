@@ -224,7 +224,12 @@ function insert_User_Message(){
 .then(response => response.text())
 
 // Displaying results to console
-.then(json => console.log(json));
+.then(json => {
+  console.log(json);
+  location.reload();
+
+
+});
 
 
 
